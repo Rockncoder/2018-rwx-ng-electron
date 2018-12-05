@@ -14,6 +14,7 @@ import {AboutComponent} from './about/about.component';
 import {AppRoutingModule} from './app-routing.module';
 import 'hammerjs';
 import 'moment';
+import { UserFormComponent } from './user-form/user-form.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import 'moment';
     ResultsListComponent,
     Convert2KPipe,
     AboutComponent,
+    UserFormComponent,
   ],
   imports: [
     BrowserModule,
