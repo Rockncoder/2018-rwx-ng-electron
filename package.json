@@ -1,14 +1,20 @@
 {
-  "name": "stars-material-base",
+  "name": "ng-electron",
+  "description": "The most pointless app ever, get it today!",
+  "author": "Troy Miles",
   "version": "0.2.0",
   "license": "MIT",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "electron": "ng build --base-href ./ && electron .",
+    "pack": "electron-builder --dir",
+    "dist": "ng build --prod --base-href ./ && electron-builder"
   },
   "private": true,
   "dependencies": {
@@ -54,5 +60,16 @@
     "ts-node": "~3.2.0",
     "tslint": "~5.3.2",
     "typescript": "~3.1.6"
+  },
+  "build": {
+    "appId": "com.tekadept.ng-electron",
+    "mac": {
+      "category": "Games",
+      "icon": "build/icons.icns"
+    },
+    "files": [
+      "tmp",
+      "./main.js"
+    ]
   }
 }
